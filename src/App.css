@@ -1,0 +1,164 @@
+.App {
+  text-align: center;
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+  
+}
+.main {
+  width: 100vw;
+  /* background: blue; */
+  height: 100vh;
+  display: flex;
+  
+}
+
+.left {
+  width: 20%;
+  height: fit-content;
+   border: 1px solid black; 
+   border-radius: 25px;
+   padding: 10px 5px 42px 21px;
+   margin: 27px;
+}
+
+.right {
+  width: 80%;
+  /* background: green; */
+   height: fit-content;
+   /* border: 1px solid green; */
+}
+.searchBox {
+  padding: 12px 63px 1px 9px;
+    margin: 0px 10px 0px 4px;
+  font-size: large;
+  font-family: "Times New Roman", Times, serif;
+}
+.searchDiv{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 91%;
+}
+.overDataHidden{
+  visibility: hidden;
+}
+.overDataVisible{
+  visibility: visible;
+}
+.divchild{
+  border: 2px solid black;
+  width: 94%;
+  padding-bottom: 5px;
+  margin-bottom: 3px;
+
+}
+.titleLabel{
+  border-bottom: 1px solid black;
+  padding: 2px 2px 2px 2px;
+}
+.updateBotton{
+  margin-left: 63px;
+}
+.divStart{
+  padding: 6px 10px 32px 14px;
+}
+.inputField{
+  padding: 2px 3px 0px 0px;
+}
+.divToDo{
+  padding:0px 13px 0px 10px;
+  border:1px solid black;
+  width: 33%;
+}
+.buttonAdd{
+  margin-left: 21%;
+}
+.insideDivToDO{
+  border: 1px solid black;
+  padding: 7px 0px 12px 10px;
+}
+.divPost{
+  padding:0px 13px 0px 10px;
+  border:1px solid black;
+  width: 33%;
+}
+.buttonAddPost{
+  margin-left: 21%;
+}
+.insideDivPost{
+  border: 1px solid black;
+  padding: 7px 0px 12px 10px;
+}
+.newDivToDo{
+  padding: 114px 0px 0px 2px;
+}
+.heaadlineNewToDo{
+  padding: 0px 0 10px 0;
+}
+.titleAddToDo{
+  border: 1px solid black;
+    width: 27.5%;
+    padding: 30px 0px 34px 85px;
+}
+.buttonAddToDO{
+  margin: 30px 8px 4px 192px;
+}
+.newDivPost{
+  padding: 0px 0px 0px 2px;
+}
+.heaadlineNewPost{
+  padding: 0px 0 10px 0;
+}
+.titleAddPost{
+  border: 1px solid black;
+    width: 27.5%;
+    padding: 30px 0px 34px 85px;
+}
+.buttonAddPost{
+  margin: 30px 8px 4px 192px;
+
+}
+
+.newDivUser{
+  padding: 114px 0px 0px 2px;
+}
+.heaadlineNewUser{
+  padding: 0px 0 10px 0;
+}
+.titleAddUser{
+  border: 1px solid black;
+    width: 27.5%;
+    padding: 30px 0px 34px 85px;
+}
+.buttonAddUser{
+  margin: 30px 8px 4px 192px;
+}
