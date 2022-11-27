@@ -1,6 +1,8 @@
 import './App.css';
 import {useState, useEffect} from 'react';
 import {getAll} from './utils';
+import ToDoSingleComp from './ToDoSingleComp';
+
 
 function ToDoComp(props) {
   const [dataArray, setData] = useState([]);
@@ -28,10 +30,7 @@ function ToDoComp(props) {
     const addTodo=()=>{
       props.callback(true)
     }
-    const btnComplted = (element)=>{
-      document.getElementById("input"+element.target.id).value = 'True'
-      document.getElementsByName("btn"+element.target.id)[0].classList.remove('overDataVisible');
-      document.getElementsByName("btn"+element.target.id)[0].classList.add('overDataHidden');
+    const todoItem = (childValue)=>{
       setCompleted(numCompleted=>numCompleted-1);
       let ansArray = []
       if(numCompleted > 1)
@@ -50,19 +49,12 @@ function ToDoComp(props) {
       </div>:''
     }
     
-    {
-        
-      dataArray.map((dataItem)=>{
-       
+    {dataArray.map((dataItem)=>{
         return(
           <div key={dataItem.id} className='divToDo' >
             <br/>
-            
             <div  className='insideDivToDO' >
-                Title: <label>{dataItem.title}</label>
-                <br/> 
-                Completed: <input id={"input"+dataItem.id} style={{border: "0px solid"}}  defaultValue={dataItem.completed===1||dataItem.completed===true|| dataItem.completed?'True':'False'} />
-                <button id={dataItem.id} name={"btn"+dataItem.id} onClick={(event) => {btnComplted(event)}} className={dataItem.completed===1||dataItem.completed===true|| dataItem.completed?'overDataHidden':'overDataVisible'}> Mark Completed</button>
+            <ToDoSingleComp title={dataItem.title} completed={dataItem.completed===1||dataItem.completed===true|| dataItem.completed?'True':'False'} callback={todoItem}/>
            </div>
            <br/>
           </div>
